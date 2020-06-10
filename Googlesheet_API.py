@@ -17,7 +17,6 @@ def PullWorkBook (event=None,context=None):
 
         #print('Connected to Google sheets')
         sheet = client.open_by_key(WorkbookID).get_worksheet(SheetIndex)
-        #sheet = client.open('COVID Daily Order Count').worksheet("All")
 
         Googlesheet = sheet.get_all_records()
         print(Googlesheet)
